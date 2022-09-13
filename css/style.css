@@ -1,0 +1,539 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "TheGrateful3";
+  src: url(../fonts/TheGrateful3.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Brandon_bld";
+  src: url(../fonts/Brandon_bld.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Brandon_med";
+  src: url(../fonts/Brandon_med.otf) format("opentype");
+}
+
+
+@font-face {
+  font-family: "Brandon_light";
+  src: url(../fonts/Brandon_light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Brandon_thin";
+  src: url(../fonts/Brandon_thin.otf) format("opentype");
+}
+
+body {
+  font-family: YuGothic, 'Yu Gothic', sans-serif;
+  background-color: #BBDED6;
+  color: #333;
+}
+
+#loader-bg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /*  background-color: #BBDED6;*/
+  color: #fff;
+}
+
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+  text-align: center;
+}
+
+.loading span {
+  display: inline-block;
+  margin: 0 -.075em;
+  animation: loading .7s infinite alternate;
+  font-size: 100px;
+  letter-spacing: 10px;
+  font-family: "Brandon_bld";
+}
+
+.loading span:nth-child(2) {
+  animation-delay: .1s;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: .2s;
+}
+
+.loading span:nth-child(4) {
+  animation-delay: .3s;
+}
+
+.loading span:nth-child(5) {
+  animation-delay: .4s;
+}
+
+.loading span:nth-child(6) {
+  animation-delay: .5s;
+}
+
+.loading span:nth-child(7) {
+  animation-delay: .6s;
+}
+
+.loading span:nth-child(8) {
+  animation-delay: .7s;
+}
+
+.loading span:nth-child(9) {
+  animation-delay: .8s;
+}
+
+.loading span:nth-child(10) {
+  animation-delay: .9s;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 50px;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 999;
+}
+
+nav i {
+  width: 40px;
+  height: 70px;
+  margin: 0 5px;
+  color: #fff;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav span {
+  line-height: 30px;
+  font-size: 20px;
+  margin: 0 5px;
+  vertical-align: text-top;
+}
+
+nav i:hover {
+  transform: scale(1.2, 1.2);
+}
+
+main {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #f3f3f3;
+  padding-top: 50px;
+}
+
+section {
+  margin: 50px auto;
+  width: 1000px;
+  border-radius: 8px;
+  border: 1px #ddd solid;
+  padding: 20px 0 100px;
+  background: #fff;
+  box-shadow: 0px 0px 10px #3333331f;
+}
+
+.title-wrapper {
+  text-align: center;
+}
+
+.title {
+  font-family: "Brandon_bld";
+  font-size: 50px;
+  font-weight: normal;
+  margin: 70px auto;
+  overflow: hidden;
+  border-bottom: 4px dashed #61C0BF;
+  padding: 0 30px;
+  line-height: 53px;
+  display: inline-block;
+}
+
+.inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+#top {
+  width: 100%;
+  height: 70vh;
+  background-color: #BBDED6;
+  background-image: url(../images/header.jpg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: sticky;
+}
+
+a.scroll {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-decoration: none;
+  color: #333;
+  padding-top: 70px;
+  font-family: "Brandon_thin";
+  letter-spacing: 1px;
+  margin-left: -24px;
+}
+
+.scroll span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #333;
+  border-bottom: 1px solid #333;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 1.5s infinite;
+  animation: sdb 1.5s infinite;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+@keyframes sdb {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+#link-work {
+  text-align: center;
+}
+
+.switch {
+  display: inline-block;
+  width: 800px;
+}
+
+.work {
+  float: left;
+  width: 350px;
+  height: 233px;
+  margin: 25px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+}
+
+.description {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  text-align: left;
+  display: table;
+}
+
+.description h2 {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 20px;
+  font-family: "Brandon_med";
+  letter-spacing: 2px;
+  font-size: 33px;
+  font-weight: normal;
+}
+
+.description:hover {
+  opacity: 1;
+}
+
+.work:nth-child(2n) {
+  animation-delay: 0.1s;
+}
+
+.work img {
+  width: 350px;
+  border-radius: 10px;
+}
+
+.modaal-container {
+  text-align: center;
+}
+
+.modaal-wrapper h2 {
+  font-family: "Brandon_med";
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.modaal-wrapper h3 {
+  letter-spacing: 2px;
+  line-height: 50px;
+}
+
+.modaal-wrapper h3 span {
+  font-size: 11px;
+}
+
+.modaal-wrapper .bold {
+  font-family: "Brandon_med";
+  font-size: 22px;
+  text-align: left;
+}
+
+.modaal-wrapper .small {
+  font-family: "Brandon_light";
+  font-size: 15px;
+  text-align: left;
+}
+
+.modaal-wrapper .text {
+  padding: 15px 0;
+  text-align: left;
+}
+
+.modaal-wrapper img {
+  width: 50%;
+  display: inline-block;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  box-shadow: 3px 3px 10px #555;
+}
+
+.modaal-wrapper video {
+  width: 70%;
+  display: inline-block;
+  margin-bottom: 50px;
+  box-shadow: 3px 3px 10px #555;
+}
+
+.modaal-wrapper .strip {
+  height: 60px;
+}
+
+.modaal-wrapper .btn {
+  font-family: "Brandon_med";
+  font-size: 15pt;
+  color: #FFB6B9;
+  text-decoration: none;
+  letter-spacing: 2px;
+  position: relative;
+  text-align: center;
+  padding: 10px 45px;
+  width: 150px;
+  border: 2px solid #FFB6B9;
+  border-radius: 50px;
+  background-image: linear-gradient(-135deg, #FFB6B9, #FFB6B9 50%, #fff 50%, #fff);
+  background-size: 100% 500%;
+  background-position: bottom;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  background-position: top;
+  color: #fff;
+}
+
+.inner {
+  width: 700px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+
+.inner h2 {
+  font-family: "Brandon_med";
+  letter-spacing: 2px;
+  background: linear-gradient(transparent 60%, #BBDED6 60%);
+  display: inline-block;
+  padding: 0 5px;
+  margin-bottom: 15px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.me {
+  width: 200px;
+  box-shadow: 10px 10px #61C0BF;
+}
+
+.profile-inner {
+  width: 430px;
+  margin-left: 68px;
+  font-size: 14px;
+}
+
+.profile-inner h1 {
+  font-size: 40px;
+  letter-spacing: 0.1em;
+}
+
+.profile-inner h3 {
+  font-family: "TheGrateful3";
+  font-size: 15px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 700px;
+  text-align: left;
+  display: inline-block;
+}
+
+td {
+  padding-bottom: 20px;
+}
+
+.date {
+  width: 25%;
+  vertical-align: top;
+}
+
+table span {
+  font-size: 12px;
+}
+
+table span a {
+  color: #369d9b;
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  background-color: #61C0BF;
+  margin-top: 100px;
+}
+
+.slider {
+  margin: 30px auto;
+  width: 90%;
+  opacity: 0;
+  transition: 3s;
+}
+
+.slick-list {
+  border-radius: 10px;
+}
+
+.slick-initialized {
+  opacity: 1
+}
+
+.slick-slide {
+  margin: 0 10px;
+}
+
+.slider img {
+  height: auto;
+  width: 100%;
+}
+
+img.slick-arrow {
+  width: 50px;
+  z-index: 10;
+}
+
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+}
+
+footer i {
+  width: 40px;
+  height: 70px;
+  margin: 0 5px;
+  float: left;
+  color: #fff;
+}
+
+footer i:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.fab,
+.fas {
+  line-height: 70px;
+}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 480px) {
+  #top h1 {
+    font-size: 55px;
+    margin-bottom: 40px;
+  }
+
+  .top {
+    background-position: right;
+  }
+}
